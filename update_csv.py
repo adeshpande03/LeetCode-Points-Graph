@@ -22,13 +22,11 @@ def update_csv(filename="data.csv"):
     last_entry = -1
     if len(df) >= 1:
         last_entry = dict(df.iloc[-1])["datetime"]
-    print(last_entry)
     if str(datetime.now().date()) != last_entry:
         new_entry = {
             "datetime": datetime.now().date(),
             "points": points,
         }
-        print(new_entry["datetime"])
         df = concat([df, DataFrame([new_entry])], ignore_index=True)
     df.to_csv(filename, index=False)
     return df
