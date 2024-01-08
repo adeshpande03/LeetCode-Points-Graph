@@ -13,6 +13,7 @@ def generate_graph(filename="data.csv"):
     y0 = df["points"].tolist()
 
     plt.figure(facecolor="#282828")
+    plt.rcParams["font.family"] = "Arial"
     plt.rcParams["text.color"] = LEETCODE_YELLOW
     plt.rcParams["axes.labelcolor"] = LEETCODE_YELLOW
     plt.rcParams["xtick.color"] = LEETCODE_YELLOW
@@ -22,6 +23,7 @@ def generate_graph(filename="data.csv"):
     cubic_interpolation_model = interp1d(x0, y0, kind="cubic")
     x = np.linspace(min(x0), max(x0), 5000)
     y = cubic_interpolation_model(x)
+    plt.title("LeetCoin Tracker")
     plt.plot(x, y, color=LEETCODE_YELLOW)
     plt.box(False)
     plt.tick_params(
@@ -40,8 +42,8 @@ def generate_graph(filename="data.csv"):
     else:
         plt.yticks(np.arange(min(y0) // 1000 * 1000 - 1000, max(y0) + 1000, 1000))
 
-    plt.savefig("points_graph.png", bbox_inches="tight", dpi=500)
-    return 
+    plt.savefig("points_graph.png", bbox_inches="tight", dpi=700)
+    return
 
 
 if __name__ == "__main__":
