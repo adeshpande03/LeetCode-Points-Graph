@@ -3,9 +3,11 @@ import pandas as pd
 import numpy as np
 from scipy.interpolate import interp1d
 import matplotlib.patches as patches
+from matplotlib import font_manager
 
 
 def generate_graph(filename="data.csv"):
+    font_manager.findSystemFonts(fontpaths=None, fontext="ttf")
     LEETCODE_YELLOW = "#ffa115"
     df = pd.read_csv(filename)
     df["points"] = df["points"].astype(float)
@@ -23,7 +25,7 @@ def generate_graph(filename="data.csv"):
     cubic_interpolation_model = interp1d(x0, y0, kind="cubic")
     x = np.linspace(min(x0), max(x0), 5000)
     y = cubic_interpolation_model(x)
-    plt.title("LeetCoin Tracker")
+    plt.title("LeetCoin Tracker", fontname="Monaco")
     plt.plot(x, y, color=LEETCODE_YELLOW)
     plt.box(False)
     plt.tick_params(
@@ -36,9 +38,10 @@ def generate_graph(filename="data.csv"):
 
     fig = plt.gcf()
     fig.set_size_inches(8, 2.25)
-
+    plt.xlabel("Days", fontname = "Monaco")
+    plt.ylabel("Coins", fontname = "Monaco")
     if max(y0) < 4000:
-        plt.yticks(np.arange(min(y0) // 250 * 250 - 250, max(y0) + 250, 250))
+        plt.yticks(np.arange(min(y0) // 250 * 250 - 250, max(y0) + 250, 250), fontname = "Monaco")
     else:
         plt.yticks(np.arange(min(y0) // 1000 * 1000 - 1000, max(y0) + 1000, 1000))
 
