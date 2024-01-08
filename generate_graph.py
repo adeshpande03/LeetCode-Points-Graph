@@ -12,19 +12,14 @@ def generate_graph(filename="data.csv"):
     df["points"] = df["points"].astype(float)
     dates = df["datetime"].tolist()
     print(dates)
-    x0 = df["entry_no."].tolist()
+    x0 = range(len(df))
     y0 = df["points"].tolist()
     plt.figure(facecolor="#282828")
     plt.rcParams["text.color"] = LEETCODE_YELLOW
     plt.rcParams["axes.labelcolor"] = LEETCODE_YELLOW
     plt.rcParams["xtick.color"] = LEETCODE_YELLOW
     plt.rcParams["ytick.color"] = LEETCODE_YELLOW
-    plt.plot(
-        x0,
-        y0,
-        "o",
-        color="#ffa115",
-    )
+    plt.plot(x0, y0, "o", color="#ffa115", markersize=2)
     cubic_interpolation_model = interp1d(x0, y0, kind="cubic")
     x = np.linspace(min(x0), max(x0), 5000)
     y = cubic_interpolation_model(x)

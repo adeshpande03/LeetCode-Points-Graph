@@ -20,7 +20,6 @@ def update_csv(filename="data.csv"):
     df = read_csv(filename)
     df.drop(df.filter(regex="Unname"), axis=1, inplace=True)
     new_entry = {
-        "entry_no.": len(df) + 1,
         "datetime": datetime.now().date(),
         "points": points,
     }
