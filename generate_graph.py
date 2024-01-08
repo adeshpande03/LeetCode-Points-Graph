@@ -7,7 +7,6 @@ from scipy.interpolate import interp1d
 def generate_graph(filename="data.csv"):
     LEETCODE_YELLOW = "#ffa115"
     df = pd.read_csv(filename)
-    print(df)
     df["points"] = df["points"].astype(float)
     x0 = range(len(df))
     y0 = df["points"].tolist()
@@ -30,9 +29,13 @@ def generate_graph(filename="data.csv"):
         top=False,
         labelbottom=False,
     )
-
-    plt.yticks(np.arange(min(y0) // 250 * 250 - 250, max(y0) + 250, 250))
-    plt.savefig("points_graph.png", bbox_inches="tight", dpi=300)
+    fig = plt.gcf()
+    fig.set_size_inches(8, 2)
+    if max(y0) < 3000:
+        plt.yticks(np.arange(min(y0) // 250 * 250 - 250, max(y0) + 250, 250))
+    else:
+        plt.yticks(np.arange(min(y0) // 1000 * 1000 - 1000, max(y0) + 1000, 1000))
+    plt.savefig("points_graph.png", bbox_inches="tight", dpi=500)
     return
 
 
