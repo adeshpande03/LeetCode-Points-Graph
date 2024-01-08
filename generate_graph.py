@@ -7,6 +7,7 @@ from scipy.interpolate import interp1d
 def generate_graph(filename="data.csv"):
     LEETCODE_YELLOW = "#ffa115"
     df = pd.read_csv(filename)
+    print(df)
     df["points"] = df["points"].astype(float)
     x0 = range(len(df))
     y0 = df["points"].tolist()
