@@ -2,7 +2,7 @@ from requests import Session
 import os
 
 
-def get_points(LEETCODE_SESSION):
+def get_points(LEETCODE_SESSION=os.environ.get("LEETCODE_SESSION")):
     BASE_URL = "https://leetcode.com/"
     POINTS_URL = BASE_URL + "points/api/total"
     if not os.environ.get("LEETCODE_SESSION"):
@@ -15,9 +15,7 @@ def get_points(LEETCODE_SESSION):
     )
     status_code = s.status_code
     status_set = {200}
-    if s.status_code in status_set:
-        print(f"Status code: {status_code}. Returned a valid status code.")
-    else:
+    if status_code not in status_set:
         raise RuntimeError(
             f"Status code: {status_code} is invalid. Check LEETCODE_SESSION or manually set csrf to troubleshoot."
         )
@@ -25,6 +23,5 @@ def get_points(LEETCODE_SESSION):
 
 
 if __name__ == "__main__":
-    LEETCODE_SESSION = os.environ.get("LEETCODE_SESSION")
-    points = get_points(LEETCODE_SESSION=LEETCODE_SESSION)
+    points = get_points()
     print(points)
