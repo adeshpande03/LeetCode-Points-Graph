@@ -33,7 +33,7 @@ def generate_graph(filename="data.csv"):
     )
 
     fig = plt.gcf()
-    fig.set_size_inches(8, 2)
+    fig.set_size_inches(8, 2.25)
 
     if max(y0) < 3000:
         plt.yticks(np.arange(min(y0) // 250 * 250 - 250, max(y0) + 250, 250))
