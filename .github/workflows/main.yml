@@ -1,0 +1,40 @@
+name: Run Python Script and Push to Another Repo
+
+on:
+  schedule:
+    - cron: "59 5 * * *" # Runs at 11:59 PM Central every day.
+  workflow_dispatch:
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout 'LeetCode-Points-Graph' repository
+        uses: actions/checkout@v2
+
+      - name: Set up Python
+        uses: actions/setup-python@v2
+        with:
+          python-version: "3.x"
+
+      - name: Run script
+        run: python main.py
+
+      - name: Checkout 'adeshpande03' repository
+        uses: actions/checkout@v2
+        with:
+          repository: adeshpande03/adeshpande03
+          token: ${{ secrets.README_PAT }}
+          path: "adeshpande03"
+
+      - name: Copy points_graph.png to 'adeshpande03' repository
+        run: cp points_graph.png adeshpande03/
+
+      - name: Commit and push to 'adeshpande03' repository
+        run: |
+          cd adeshpande03
+          git config --global user.name 'Akhil Deshpande'
+          git config --global user.email 'deshpande.akhil.s@gmail.com'
+          git add points_graph.png
+          git commit -m "Update points_graph.png"
+          git push
