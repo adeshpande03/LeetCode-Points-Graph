@@ -9,8 +9,14 @@ jobs:
   build:
     runs-on: ubuntu-latest
     steps:
-      - name: Checkout 'LeetCode-Points-Graph' repository
+      - name: Checkout Repository
         uses: actions/checkout@v2
+
+      - name: Install Monaco Font
+        run: |
+          sudo mkdir -p /usr/share/fonts/truetype/custom
+          sudo cp fonts/Monaco.ttf /usr/share/fonts/truetype/custom
+          sudo fc-cache -f -v
 
       - name: Set up Python
         uses: actions/setup-python@v2
