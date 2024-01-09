@@ -2,7 +2,7 @@ name: Run Python Script and Push to Another Repo
 
 on:
   schedule:
-    - cron: "0 */6 * * *"
+    - cron: "0 */12 * * *"
   workflow_dispatch:
 
 jobs:
