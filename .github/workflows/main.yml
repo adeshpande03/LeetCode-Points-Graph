@@ -55,3 +55,9 @@ jobs:
           git add logs.log
           git commit -m "Update points_graph_rounded_corners.png"
           git push
+          cd ..
+          cd Leetcode-Points-Graph
+          git add points_graph_rounded_corners.png
+          git add logs.log
+          git commit -m "Update points_graph_rounded_corners.png"
+          git push
