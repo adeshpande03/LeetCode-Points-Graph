@@ -2,8 +2,7 @@ name: Run Python Script and Push to Another Repo
 
 on:
   schedule:
-    - cron: "42 3 * * *" # Runs at 11:59 PM Central every day.
-  workflow_dispatch:
+    - cron: "45 3 * * *" # Runs at 11:59 PM Central every day.
 
 jobs:
   build:
