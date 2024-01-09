@@ -3,7 +3,6 @@ name: Run Python Script and Push to Another Repo
 on:
   schedule:
     - cron: "*/15 * * * *"
-  push:
   workflow_dispatch:
 
 jobs:
@@ -55,8 +54,24 @@ jobs:
           git add logs.log
           git commit -m "Update points_graph_rounded_corners.png"
           git push
-          cd ..
+            
+      - name: Checkout 'Leetcode-Points-Graph' repository
+        uses: actions/checkout@v2
+        with:
+          repository: adeshpande03/Leetcode-Points-Graph
+          token: ${{ secrets.README_PAT }}
+          path: "Leetcode-Points-Graph"
+
+      - name: Copy points_graph.png to 'Leetcode-Points-Graph' repository
+        run: |
+          cp points_graph_rounded_corners.png Leetcode-Points-Graph/
+          cp logs.log Leetcode-Points-Graph/
+
+      - name: Commit and push to 'adeshpande03' repository
+        run: |
           cd Leetcode-Points-Graph
+          git config --global user.name 'Akhil Deshpande'
+          git config --global user.email 'deshpande.akhil.s@gmail.com'
           git add points_graph_rounded_corners.png
           git add logs.log
           git commit -m "Update points_graph_rounded_corners.png"
