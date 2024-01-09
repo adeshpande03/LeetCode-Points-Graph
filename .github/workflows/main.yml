@@ -3,6 +3,8 @@ name: Run Python Script and Push to Another Repo
 on:
   schedule:
     - cron: "*/15 * * * *"
+  push:
+  workflow_call:
 
 jobs:
   build:
