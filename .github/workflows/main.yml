@@ -55,21 +55,21 @@ jobs:
           git commit -m "Update points_graph_rounded_corners.png"
           git push
             
-      - name: Checkout 'Leetcode-Points-Graph' repository
+      - name: Checkout 'LeetCode-Points-Graph' repository
         uses: actions/checkout@v2
         with:
-          repository: adeshpande03/Leetcode-Points-Graph
+          repository: adeshpande03/LeetCode-Points-Graph
           token: ${{ secrets.README_PAT }}
-          path: "Leetcode-Points-Graph"
+          path: "LeetCode-Points-Graph"
 
-      - name: Copy points_graph.png to 'Leetcode-Points-Graph' repository
+      - name: Copy points_graph.png to 'LeetCode-Points-Graph' repository
         run: |
-          cp points_graph_rounded_corners.png Leetcode-Points-Graph/
-          cp logs.log Leetcode-Points-Graph/
+          cp points_graph_rounded_corners.png LeetCode-Points-Graph/
+          cp logs.log LeetCode-Points-Graph/
 
       - name: Commit and push to 'adeshpande03' repository
         run: |
-          cd Leetcode-Points-Graph
+          cd LeetCode-Points-Graph
           git config --global user.name 'Akhil Deshpande'
           git config --global user.email 'deshpande.akhil.s@gmail.com'
           git pull
