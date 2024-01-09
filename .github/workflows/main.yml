@@ -2,7 +2,7 @@ name: Run Python Script and Push to Another Repo
 
 on:
   schedule:
-    - cron: '51 3 * * *'
+    - cron: "*/15 * * * *"
 
 jobs:
   build:
