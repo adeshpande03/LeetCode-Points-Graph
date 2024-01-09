@@ -48,6 +48,6 @@ jobs:
           cd adeshpande03
           git config --global user.name 'Akhil Deshpande'
           git config --global user.email 'deshpande.akhil.s@gmail.com'
-          git add points_graph.png
-          git commit -m "Update points_graph.png"
+          git add points_graph_rounded_corners.png
+          git commit -m "Update points_graph_rounded_corners.png"
           git push
