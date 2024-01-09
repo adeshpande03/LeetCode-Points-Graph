@@ -41,7 +41,7 @@ jobs:
           path: "adeshpande03"
 
       - name: Copy points_graph.png to 'adeshpande03' repository
-        run: cp points_graph_rounded_corders.png adeshpande03/
+        run: cp points_graph_rounded_corners.png adeshpande03/
 
       - name: Commit and push to 'adeshpande03' repository
         run: |
