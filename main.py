@@ -8,7 +8,7 @@ def main():
     update_csv()
     generate_graph()
     im = Image.open("points_graph.png")
-    im = add_corners(im, 10)
+    im = add_corners(im, 25)
     im.save("points_graph_rounded_corners.png")
 
 
