@@ -12,5 +12,5 @@ def add_corners(im, rad):
     im.putalpha(alpha)
     return im
 im = Image.open('points_graph.png')
-im = add_corners(im, 50)
+im = add_corners(im, 25)
 im.save('tiger.png')
