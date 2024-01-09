@@ -12,7 +12,7 @@ def update_csv(filename="data.csv"):
         filename (str, optional): _description_. Defaults to "data.csv".
 
     Returns:
-        df: updated dataframe
+        new_entry: newest entry to csv
     """
     if not os.path.exists("data.csv"):
         create_csv(filename)
@@ -36,7 +36,7 @@ def update_csv(filename="data.csv"):
         df = concat([df, DataFrame([new_entry])], ignore_index=True)
     
     df.to_csv(filename, index=False)
-    return df
+    return new_entry
 
 
 if __name__ == "__main__":
