@@ -72,6 +72,7 @@ jobs:
           cd Leetcode-Points-Graph
           git config --global user.name 'Akhil Deshpande'
           git config --global user.email 'deshpande.akhil.s@gmail.com'
+          git pull
           git add points_graph_rounded_corners.png
           git add logs.log
           git commit -m "Update points_graph_rounded_corners.png"
