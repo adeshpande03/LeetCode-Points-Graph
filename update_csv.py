@@ -26,10 +26,15 @@ def update_csv(filename="data.csv"):
         "datetime": str(datetime.now().date()),
         "points": points,
     }
-    if (
+    if new_entry["datetime"] == last_entry["datetime"] and new_entry['points'] != last_entry['points']:
+        df = df[:-1]
+        df = concat([df, DataFrame([new_entry])], ignore_index=True)
+    
+    elif (
         new_entry != last_entry
     ):
         df = concat([df, DataFrame([new_entry])], ignore_index=True)
+    
     df.to_csv(filename, index=False)
     return df
 
