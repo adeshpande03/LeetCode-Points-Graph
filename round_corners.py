@@ -15,6 +15,4 @@ def add_corners(im, rad):
     return im
 
 
-im = Image.open("points_graph.png")
-im = add_corners(im, 10)
-im.save("tiger.png")
+
