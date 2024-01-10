@@ -66,6 +66,7 @@ jobs:
         run: |
           cp points_graph_rounded_corners.png LeetCode-Points-Graph/
           cp logs.log LeetCode-Points-Graph/
+          cp data.csv LeetCode-Points-Graph/
 
       - name: Commit and push to 'adeshpande03' repository
         run: |
