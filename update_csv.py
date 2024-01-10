@@ -3,6 +3,7 @@ from get_points import get_points
 import os
 from datetime import datetime
 from create_csv import create_csv
+import pytz
 
 
 def update_csv(filename="data.csv"):
@@ -23,18 +24,19 @@ def update_csv(filename="data.csv"):
     if len(df) >= 1:
         last_entry = dict(df.iloc[-1])
     new_entry = {
-        "datetime": str(datetime.now().date()),
+        "datetime": str(datetime.now(pytz.timezone("US/Pacific")).date()),
         "points": points,
     }
-    if new_entry["datetime"] == last_entry["datetime"] and new_entry['points'] != last_entry['points']:
+    if (
+        new_entry["datetime"] == last_entry["datetime"]
+        and new_entry["points"] != last_entry["points"]
+    ):
         df = df[:-1]
         df = concat([df, DataFrame([new_entry])], ignore_index=True)
-    
-    elif (
-        new_entry != last_entry
-    ):
+
+    elif new_entry != last_entry:
         df = concat([df, DataFrame([new_entry])], ignore_index=True)
-    
+
     df.to_csv(filename, index=False)
     return new_entry
 
