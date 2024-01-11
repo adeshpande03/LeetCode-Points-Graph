@@ -40,20 +40,6 @@ jobs:
           token: ${{ secrets.README_PAT }}
           path: "adeshpande03"
 
-      - name: Copy points_graph.png to 'adeshpande03' repository
-        run: |
-          cp points_graph_rounded_corners.png adeshpande03/
-          cp logs.log adeshpande03/
-
-      - name: Commit and push to 'adeshpande03' repository
-        run: |
-          cd adeshpande03
-          git config --global user.name 'Akhil Deshpande'
-          git config --global user.email 'deshpande.akhil.s@gmail.com'
-          git add points_graph_rounded_corners.png
-          git add logs.log
-          git commit -m "Update points_graph_rounded_corners.png"
-          git push
 
       - name: Checkout 'LeetCode-Points-Graph' repository
         uses: actions/checkout@v2
@@ -68,7 +54,7 @@ jobs:
           cp logs.log LeetCode-Points-Graph/
           cp data.csv LeetCode-Points-Graph/
 
-      - name: Commit and push to 'adeshpande03' repository
+      - name: Commit and push to 'LeetCode-Points-Graph' repository
         run: |
           cd LeetCode-Points-Graph
           git config --global user.name 'Akhil Deshpande'
