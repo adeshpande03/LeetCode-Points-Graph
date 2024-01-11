@@ -33,13 +33,6 @@ jobs:
         env:
           LEETCODE_SESSION: ${{ secrets.LEETCODE_SESSION }}
 
-      - name: Checkout 'adeshpande03' repository
-        uses: actions/checkout@v2
-        with:
-          repository: adeshpande03/adeshpande03
-          token: ${{ secrets.README_PAT }}
-          path: "adeshpande03"
-
 
       - name: Checkout 'LeetCode-Points-Graph' repository
         uses: actions/checkout@v2
