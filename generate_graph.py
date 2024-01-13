@@ -20,7 +20,7 @@ def generate_graph(filename="data.csv"):
     plt.rcParams["axes.labelcolor"] = LEETCODE_YELLOW
     plt.rcParams["xtick.color"] = LEETCODE_YELLOW
     plt.rcParams["ytick.color"] = LEETCODE_YELLOW
-    marker_size = 2 if len(df) < 10 else 1
+    marker_size = 2 if len(df) < 10 else 0
     plt.plot(x0, y0, "o", color=LEETCODE_YELLOW, markersize=marker_size)
     cubic_interpolation_model = interp1d(x0, y0, kind="cubic")
     x = np.linspace(min(x0), max(x0), 5000)
@@ -38,10 +38,12 @@ def generate_graph(filename="data.csv"):
 
     fig = plt.gcf()
     fig.set_size_inches(8, 2.25)
-    plt.xlabel("Days", fontname = "Monaco")
-    plt.ylabel("Coins", fontname = "Monaco")
+    plt.xlabel("Days", fontname="Monaco")
+    plt.ylabel("Coins", fontname="Monaco")
     if max(y0) < 4000:
-        plt.yticks(np.arange(min(y0) // 250 * 250 - 250, max(y0) + 250, 250), fontname = "Monaco")
+        plt.yticks(
+            np.arange(min(y0) // 250 * 250, max(y0) + 250, 250), fontname="Monaco"
+        )
     else:
         plt.yticks(np.arange(min(y0) // 1000 * 1000 - 1000, max(y0) + 1000, 1000))
 
