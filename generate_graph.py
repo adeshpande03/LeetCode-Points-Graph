@@ -42,7 +42,7 @@ def generate_graph(filename="data.csv"):
     plt.ylabel("Coins", fontname="Monaco")
     if max(y0) < 4000:
         plt.yticks(
-            np.arange(min(y0) // 250 * 250, max(y0) + 250, 250), fontname="Monaco"
+            np.arange(min(y0) // 500 * 500, max(y0) + 500, 500), fontname="Monaco"
         )
     else:
         plt.yticks(np.arange(min(y0) // 1000 * 1000 - 1000, max(y0) + 1000, 1000))
