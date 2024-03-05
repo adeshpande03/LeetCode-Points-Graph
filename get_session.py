@@ -7,6 +7,7 @@ from selenium.webdriver.common.by import By
 import os
 
 def get_session():
+    LC_EMAIL = os.environ.get('LC_EMAIL')
     url = "https://leetcode.com/accounts/login/"
     driver_path = ChromeDriverManager().install()
     options = Options()
@@ -19,7 +20,7 @@ def get_session():
     time.sleep(5)
     login_field = driver.find_element(By.ID, "id_login")
     password_field = driver.find_element(By.ID, "id_password")
-    login_field.send_keys(os.environ.get('LC_EMAIL'))
+    login_field.send_keys(LC_EMAIL)
     password_field.send_keys(os.environ.get('LC_PASSWORD'))
     login_button = driver.find_element(By.ID, "signin_btn")
     time.sleep(3.5463)
