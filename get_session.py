@@ -31,4 +31,5 @@ def get_session():
     for cookie in cookies:
         if cookie["name"] == "LEETCODE_SESSION":
             return cookie["value"]
+        
     return None
