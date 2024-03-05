@@ -24,7 +24,7 @@ def get_session():
     login_field.send_keys(LC_EMAIL)
     password_field.send_keys(os.environ.get('LC_PASSWORD'))
     login_button = driver.find_element(By.ID, "signin_btn")
-    time.sleep(5.5463)
+    time.sleep(5.32452345)
     login_button.click()
     time.sleep(5)
     cookies = driver.get_cookies()
