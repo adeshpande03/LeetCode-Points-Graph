@@ -4,8 +4,8 @@ import smtplib
 
 
 def get_points(LEETCODE_SESSION=os.environ.get("LEETCODE_SESSION")):
-    # if not LEETCODE_SESSION:
-    #     LEETCODE_SESSION = os.environ.get("LEETCODE_SESSION")
+    if not LEETCODE_SESSION:
+        LEETCODE_SESSION = os.environ.get("LEETCODE_SESSION")
     BASE_URL = "https://leetcode.com/"
     POINTS_URL = BASE_URL + "points/api/total"
     cookies = {"LEETCODE_SESSION": LEETCODE_SESSION}
