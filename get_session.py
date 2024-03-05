@@ -8,6 +8,8 @@ import os
 
 def get_session():
     LC_EMAIL = os.environ.get('LC_EMAIL')
+    print(LC_EMAIL)
+    print(os.environ.get("LC_PASSWORD"))
     url = "https://leetcode.com/accounts/login/"
     driver_path = ChromeDriverManager().install()
     print(driver_path)
