@@ -17,7 +17,7 @@ def update_csv(filename="data.csv"):
     """
     if not os.path.exists("data.csv"):
         create_csv(filename)
-    points = get_points(get_session())
+    points = get_points()
     df = read_csv(filename)
     df.drop(df.filter(regex="Unname"), axis=1, inplace=True)
     last_entry = -1
