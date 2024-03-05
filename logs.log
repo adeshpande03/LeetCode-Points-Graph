@@ -383,3 +383,17 @@ INFO:root:{'datetime': '2024-03-04', 'points': 3616}, time: 1709588731.766967
 INFO:root:{'datetime': '2024-03-04', 'points': 3616}, time: 1709601346.695362
 INFO:root:{'datetime': '2024-03-04', 'points': 3616}, time: 1709619765.336679
 INFO:root:{'datetime': '2024-03-05', 'points': 3627}, time: 1709642001.468628
+INFO:WDM:====== WebDriver manager ======
+INFO:WDM:Get LATEST chromedriver version for google-chrome
+INFO:WDM:Get LATEST chromedriver version for google-chrome
+INFO:WDM:Driver [/Users/akhildeshpande/.wdm/drivers/chromedriver/mac64/122.0.6261.94/chromedriver-mac-arm64/chromedriver] found in cache
+INFO:WDM:====== WebDriver manager ======
+INFO:WDM:Get LATEST chromedriver version for google-chrome
+INFO:WDM:Get LATEST chromedriver version for google-chrome
+INFO:WDM:Driver [/Users/akhildeshpande/.wdm/drivers/chromedriver/mac64/122.0.6261.94/chromedriver-mac-arm64/chromedriver] found in cache
+INFO:root:{'datetime': '2024-03-05', 'points': 3627}, time: 1709667277.678451
+INFO:WDM:====== WebDriver manager ======
+INFO:WDM:Get LATEST chromedriver version for google-chrome
+INFO:WDM:Get LATEST chromedriver version for google-chrome
+INFO:WDM:Driver [/Users/akhildeshpande/.wdm/drivers/chromedriver/mac64/122.0.6261.94/chromedriver-mac-arm64/chromedriver] found in cache
+INFO:root:{'datetime': '2024-03-05', 'points': 3627}, time: 1709667484.493814

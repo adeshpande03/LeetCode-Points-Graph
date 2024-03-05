@@ -4,7 +4,7 @@ import os
 from datetime import datetime
 from create_csv import create_csv
 import pytz
-
+from get_session import get_session
 
 def update_csv(filename="data.csv"):
     """Updates a csv file with a new entry if the current points value is diferent than the previous one
@@ -17,7 +17,7 @@ def update_csv(filename="data.csv"):
     """
     if not os.path.exists("data.csv"):
         create_csv(filename)
-    points = get_points()
+    points = get_points(get_session())
     df = read_csv(filename)
     df.drop(df.filter(regex="Unname"), axis=1, inplace=True)
     last_entry = -1

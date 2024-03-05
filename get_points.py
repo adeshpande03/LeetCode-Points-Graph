@@ -6,8 +6,6 @@ import smtplib
 def get_points(LEETCODE_SESSION=os.environ.get("LEETCODE_SESSION")):
     BASE_URL = "https://leetcode.com/"
     POINTS_URL = BASE_URL + "points/api/total"
-    if not os.environ.get("LEETCODE_SESSION"):
-        raise RuntimeError("LEETCODE_SESSION not set")
     cookies = {"LEETCODE_SESSION": LEETCODE_SESSION}
     s = Session()
     s = s.get(
@@ -16,7 +14,7 @@ def get_points(LEETCODE_SESSION=os.environ.get("LEETCODE_SESSION")):
     )
     status_code = s.status_code
     status_set = {200}
-    if status_code not in status_set:
+    if status_code not in status_set or not LEETCODE_SESSION:
         CARRIERS = {
             "tmobile": "@tmomail.net",
             "verizon": "@vtext.com",
@@ -36,6 +34,7 @@ def get_points(LEETCODE_SESSION=os.environ.get("LEETCODE_SESSION")):
             server.starttls()
             server.login(auth[0], auth[1])
             server.sendmail(auth[0], recipient, message)
+
         message = "Please fix Leetcode Points graph, your LEETCODE_SESSION is invalid"
         send_message("verizon", message)
 
