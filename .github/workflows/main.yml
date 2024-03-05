@@ -31,7 +31,11 @@ jobs:
         run: python main.py
         env:
           LEETCODE_SESSION: ${{ secrets.LEETCODE_SESSION }}
-
+          LC_EMAIL: ${{ secrets.LC_EMAIL }}
+          LC_PASSWORD: ${{ secrets.LC_PASSWORD }}
+          APP_PASSWORD: ${{ secrets.APP_PASSWORD }}
+          EMAIL: ${{ secrets.EMAIL }}
+          PHONE_NUMBER: ${{ secrets.PHONE_NUMBER }}
 
       - name: Checkout 'LeetCode-Points-Graph' repository
         uses: actions/checkout@v2
