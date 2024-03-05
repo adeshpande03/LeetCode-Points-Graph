@@ -6,6 +6,7 @@ from create_csv import create_csv
 import pytz
 from get_session import get_session
 
+
 def update_csv(filename="data.csv"):
     """Updates a csv file with a new entry if the current points value is diferent than the previous one
 

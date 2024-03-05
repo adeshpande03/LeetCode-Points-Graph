@@ -10,6 +10,7 @@ def get_session():
     LC_EMAIL = os.environ.get('LC_EMAIL')
     url = "https://leetcode.com/accounts/login/"
     driver_path = ChromeDriverManager().install()
+    print(driver_path)
     options = Options()
     options.add_argument("--headless")  # Run Chrome in headless mode
     options.add_argument("--disable-gpu")  # Disable GPU hardware acceleration
@@ -23,10 +24,11 @@ def get_session():
     login_field.send_keys(LC_EMAIL)
     password_field.send_keys(os.environ.get('LC_PASSWORD'))
     login_button = driver.find_element(By.ID, "signin_btn")
-    time.sleep(3.5463)
+    time.sleep(5.5463)
     login_button.click()
-    time.sleep(3)
+    time.sleep(5)
     cookies = driver.get_cookies()
+    print(cookies)
     driver.quit()
     for cookie in cookies:
         if cookie["name"] == "LEETCODE_SESSION":
