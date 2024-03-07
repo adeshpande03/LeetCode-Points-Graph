@@ -18,8 +18,8 @@ def update_csv(filename="data.csv"):
     """
     if not os.path.exists("data.csv"):
         create_csv(filename)
-    lc_session = get_session()
-    print("lc_session", lc_session)
+    # lc_session = get_session()
+    # print("lc_session", lc_session)
     points = get_points()
     df = read_csv(filename)
     df.drop(df.filter(regex="Unname"), axis=1, inplace=True)
