@@ -1045,3 +1045,37 @@ INFO:root:stalled
 INFO:root:stalled
 INFO:root:stalled
 INFO:root:{'datetime': '2024-07-29', 'points': 5864}, time: 1722283869.959835
+WARNING:matplotlib.font_manager:findfont: Font family 'Arial' not found.
+WARNING:matplotlib.font_manager:findfont: Font family 'Arial' not found.
+WARNING:matplotlib.font_manager:findfont: Font family 'Arial' not found.
+WARNING:matplotlib.font_manager:findfont: Font family 'Arial' not found.
+WARNING:matplotlib.font_manager:findfont: Font family 'Arial' not found.
+WARNING:matplotlib.font_manager:findfont: Font family 'Arial' not found.
+WARNING:matplotlib.font_manager:findfont: Font family 'Arial' not found.
+WARNING:matplotlib.font_manager:findfont: Font family 'Arial' not found.
+WARNING:matplotlib.font_manager:findfont: Font family 'Arial' not found.
+WARNING:matplotlib.font_manager:findfont: Font family 'Arial' not found.
+WARNING:matplotlib.font_manager:findfont: Font family 'Arial' not found.
+WARNING:matplotlib.font_manager:findfont: Font family 'Arial' not found.
+WARNING:matplotlib.font_manager:findfont: Font family 'Arial' not found.
+WARNING:matplotlib.font_manager:findfont: Font family 'Arial' not found.
+WARNING:matplotlib.font_manager:findfont: Font family 'Arial' not found.
+WARNING:matplotlib.font_manager:findfont: Font family 'Arial' not found.
+WARNING:matplotlib.font_manager:findfont: Font family 'Arial' not found.
+WARNING:matplotlib.font_manager:findfont: Font family 'Arial' not found.
+WARNING:matplotlib.font_manager:findfont: Font family 'Arial' not found.
+WARNING:matplotlib.font_manager:findfont: Font family 'Arial' not found.
+WARNING:matplotlib.font_manager:findfont: Font family 'Arial' not found.
+WARNING:matplotlib.font_manager:findfont: Font family 'Arial' not found.
+WARNING:matplotlib.font_manager:findfont: Font family 'Arial' not found.
+WARNING:matplotlib.font_manager:findfont: Font family 'Arial' not found.
+WARNING:matplotlib.font_manager:findfont: Font family 'Arial' not found.
+WARNING:matplotlib.font_manager:findfont: Font family 'Arial' not found.
+WARNING:matplotlib.font_manager:findfont: Font family 'Arial' not found.
+WARNING:matplotlib.font_manager:findfont: Font family 'Arial' not found.
+WARNING:matplotlib.font_manager:findfont: Font family 'Arial' not found.
+WARNING:matplotlib.font_manager:findfont: Font family 'Arial' not found.
+WARNING:matplotlib.font_manager:findfont: Font family 'Arial' not found.
+WARNING:matplotlib.font_manager:findfont: Font family 'Arial' not found.
+WARNING:matplotlib.font_manager:findfont: Font family 'Arial' not found.
+INFO:root:{'datetime': '2024-07-29', 'points': 5864}, time: 1722284033.741327
