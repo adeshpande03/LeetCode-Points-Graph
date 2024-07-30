@@ -15,7 +15,7 @@ def generate_graph(filename="data.csv"):
     y0 = df["points"].tolist()
 
     plt.figure(facecolor="#282828")
-    plt.rcParams["font.family"] = "Arial"
+    plt.rcParams["font.family"] = "Monaco"
     plt.rcParams["text.color"] = LEETCODE_YELLOW
     plt.rcParams["axes.labelcolor"] = LEETCODE_YELLOW
     plt.rcParams["xtick.color"] = LEETCODE_YELLOW
