@@ -2156,3 +2156,4 @@ INFO:root:{'datetime': '2025-08-01', 'points': 7972}, time: 1754036663.121661
 INFO:root:{'datetime': '2025-08-01', 'points': 7972}, time: 1754065351.599683
 INFO:root:{'datetime': '2025-08-01', 'points': 7972}, time: 1754097685.254165
 INFO:root:{'datetime': '2025-08-02', 'points': 7972}, time: 1754122866.499091
+INFO:root:stalled
