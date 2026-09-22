@@ -3397,3 +3397,4 @@ INFO:root:{'datetime': '2026-09-20', 'points': 8192}, time: 1789928863.891565
 INFO:root:{'datetime': '2026-09-20', 'points': 8192}, time: 1789959995.205363
 INFO:root:{'datetime': '2026-09-21', 'points': 8192}, time: 1790002097.842419
 INFO:root:{'datetime': '2026-09-21', 'points': 8192}, time: 1790021673.046655
+INFO:root:stalled
